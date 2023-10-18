@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit & Remove Elements | Dom</title>
+</head>
+<body style="background-color: #212121;color:white">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    //Now my task is design a function that takes language name and 
+    //add in the list 
+    function addLanguage(languageName){
+        //create list 
+        const li = document.createElement('li');
+        li.innerHTML= languageName;
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Java");
+    addLanguage("TypeScript");
+//More optimized way 
+    function addLangOpt(languageName){
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(languageName));
+        document.querySelector(".language").appendChild(li);
+    }
+    addLangOpt("Python")
+
+    //Edit
+    function editLanguage(nth , text){
+        const secondLang =document.querySelector(`li:nth-child(${nth})`);
+        const newli = document.createElement('li');
+        newli.textContent=text;
+        secondLang.replaceWith(newli);
+    }
+  editLanguage(2,"Kotlin")
+
+  //Remove 
+  const remove = (position)=>{
+   const positionLi = document.querySelector(`li:nth-child(${position})`);
+   positionLi.remove();
+  }
+//   remove();
+</script>
+</html>
