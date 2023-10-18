@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom create elements</title>
+</head>
+<body style="background-color: #212121; color:white">
+    <!-- <div class="parent">
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+    </div> -->
+</body>
+<script>
+/*
+
+    //1. First task select the parent class and log it .
+   const parent = document.querySelector(".parent");
+   console.log(parent);
+   //find the children
+   console.log(parent.children); //It will gives html collection
+   //That is very similar to array but not array.
+   console.log(parent.children[1].innerHTML);
+
+   for (let i = 0; i < parent.children.length; i++) {
+    console.log(parent.children[i].innerHTML); 
+   }
+   //We can also gives style via dom
+   parent.children[1].style.color = "orange"
+
+
+
+  //Let's say i have access to the child div . Now how can we target the parent?
+  const dayOne = document.querySelector('.day');
+  console.log(dayOne);
+  console.log(dayOne.parentElement);
+  //target the next element or sibilings
+  console.log(dayOne.nextElementSibling);
+
+     */
+
+     //Create element using DOM
+     const div = document.createElement('div');
+     div.className="main";
+     div.id = Math.round(Math.random() * 10 + 1 );
+     div.setAttribute("title", "DOM");
+     console.log(div);
+     div.style.backgroundColor = "green";
+     div.style.padding='12px'
+     div.style.margin= '10px'
+     const addText = document.createTextNode('ChayanSD.dev');
+     div.appendChild(addText)
+     document.body.appendChild(div);
+
+</script>
+
+</html>
