@@ -36,7 +36,7 @@ const course = {
     courseInstructor : "Hitesh sir"
 }
 
-//When we acces 
+//When we access
 // course.courseInstructor something like that 
 //But we have better approch 
 // const {courseInstructor} = course
