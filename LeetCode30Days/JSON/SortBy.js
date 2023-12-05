@@ -4,14 +4,6 @@
  * @return {Array}
  */
 var sortBy = function(arr, fn) {
-   //sort the array using the function
-  /* let result = arr[0];
-    for (let i=1; i<arr.length; i++) {
-        if (fn(arr[i])<fn(result)) {
-            result = fn(arr[i])
-        }
-    }
-    return result;*/
     return arr.sort(function(a, b) {
         return fn(a) - fn(b);
     });
